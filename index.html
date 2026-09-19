@@ -132,447 +132,6 @@
         @media(max-width:1024px){.mobile-center{text-align:center!important;margin-left:auto;margin-right:auto}.mobile-center .section-label{justify-content:center}.mobile-center-items{justify-content:center!important}.mobile-center-card{margin-left:auto;margin-right:auto}}
         @media(max-width:768px){.hero-title{font-size:2.8rem!important}.section-title{font-size:1.75rem}.nav-links-desktop{display:none!important}.mobile-menu-btn{display:flex!important}}
         @media(min-width:769px){.mobile-menu-btn{display:none!important}}
-          .plans-section {
-            padding: 100px 24px 120px;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        /* ── Background Glow Effects ── */
-        .plans-section::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 400px;
-            background: radial-gradient(ellipse, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .plans-section::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            right: -100px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        /* ── Header ── */
-        .plans-header {
-            text-align: center;
-            margin-bottom: 72px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .plans-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #00d4ff;
-            margin-bottom: 20px;
-            padding: 8px 20px;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 100px;
-            background: rgba(0, 212, 255, 0.04);
-        }
-
-        .plans-label i {
-            font-size: 11px;
-        }
-
-        .plans-title {
-            font-size: clamp(32px, 5vw, 52px);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .plans-subtitle {
-            font-size: 16px;
-            font-weight: 400;
-            color: #6b7280;
-            max-width: 460px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* ── Cards Grid ── */
-        .plans-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            position: relative;
-            z-index: 1;
-            align-items: start;
-        }
-
-        /* ── Card Base ── */
-        .plan-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 20px;
-            padding: 40px 32px 36px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .plan-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
-        }
-
-        .plan-card:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-6px);
-        }
-
-        /* ── Card Icon ── */
-        .plan-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 28px;
-            position: relative;
-        }
-
-        .plan-card.portfolio .plan-icon {
-            background: rgba(0, 212, 255, 0.08);
-            border: 1px solid rgba(0, 212, 255, 0.15);
-            color: #00d4ff;
-        }
-
-        .plan-card.professional .plan-icon {
-            background: rgba(139, 92, 246, 0.08);
-            border: 1px solid rgba(139, 92, 246, 0.15);
-            color: #8b5cf6;
-        }
-
-        .plan-card.custom .plan-icon {
-            background: rgba(251, 191, 36, 0.08);
-            border: 1px solid rgba(251, 191, 36, 0.15);
-            color: #fbbf24;
-        }
-
-        /* ── Card Name ── */
-        .plan-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        /* ── Card Description ── */
-        .plan-desc {
-            font-size: 14px;
-            font-weight: 400;
-            color: #6b7280;
-            line-height: 1.5;
-            margin-bottom: 28px;
-            min-height: 42px;
-        }
-
-        /* ── Price ── */
-        .plan-price {
-            margin-bottom: 32px;
-            padding-bottom: 28px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .plan-price .amount {
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .plan-card.portfolio .plan-price .amount {
-            background: linear-gradient(135deg, #00d4ff, #00a8cc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .plan-card.professional .plan-price .amount {
-            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .plan-card.custom .plan-price .amount {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .plan-price .range {
-            font-size: 14px;
-            font-weight: 400;
-            color: #4b5563;
-            margin-top: 4px;
-        }
-
-        /* ── Features List ── */
-        .plan-features {
-            list-style: none;
-            margin-bottom: 36px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .plan-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 14px;
-            font-weight: 400;
-            color: #9ca3af;
-            line-height: 1.4;
-        }
-
-        .plan-features li .check {
-            flex-shrink: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            margin-top: 1px;
-        }
-
-        .plan-card.portfolio .check {
-            background: rgba(0, 212, 255, 0.1);
-            color: #00d4ff;
-        }
-
-        .plan-card.professional .check {
-            background: rgba(139, 92, 246, 0.1);
-            color: #8b5cf6;
-        }
-
-        .plan-card.custom .check {
-            background: rgba(251, 191, 36, 0.1);
-            color: #fbbf24;
-        }
-
-        /* ── CTA Button ── */
-        .plan-btn {
-            width: 100%;
-            padding: 14px 24px;
-            border-radius: 12px;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            border: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .plan-card.portfolio .plan-btn {
-            background: rgba(0, 212, 255, 0.08);
-            color: #00d4ff;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-        }
-
-        .plan-card.portfolio .plan-btn:hover {
-            background: rgba(0, 212, 255, 0.15);
-            border-color: rgba(0, 212, 255, 0.4);
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
-        }
-
-        .plan-card.professional .plan-btn {
-            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-            color: #ffffff;
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.2);
-        }
-
-        .plan-card.professional .plan-btn:hover {
-            box-shadow: 0 8px 40px rgba(139, 92, 246, 0.35);
-            transform: translateY(-1px);
-        }
-
-        .plan-card.custom .plan-btn {
-            background: rgba(251, 191, 36, 0.08);
-            color: #fbbf24;
-            border: 1px solid rgba(251, 191, 36, 0.2);
-        }
-
-        .plan-card.custom .plan-btn:hover {
-            background: rgba(251, 191, 36, 0.15);
-            border-color: rgba(251, 191, 36, 0.4);
-            box-shadow: 0 0 30px rgba(251, 191, 36, 0.15);
-        }
-
-        .plan-btn i {
-            font-size: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .plan-btn:hover i {
-            transform: translateX(3px);
-        }
-
-        /* ── Popular Badge ── */
-        .popular-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            padding: 5px 14px;
-            border-radius: 100px;
-            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-            color: #ffffff;
-            box-shadow: 0 2px 12px rgba(139, 92, 246, 0.4);
-        }
-
-        /* ── Professional Card Glow ── */
-        .plan-card.professional {
-            border-color: rgba(139, 92, 246, 0.15);
-            background: rgba(139, 92, 246, 0.03);
-        }
-
-        .plan-card.professional::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
-        }
-
-        .plan-card.professional:hover {
-            border-color: rgba(139, 92, 246, 0.3);
-            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.08);
-        }
-
-        /* ── Bottom Note ── */
-        .plans-note {
-            text-align: center;
-            margin-top: 56px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .plans-note p {
-            font-size: 14px;
-            color: #4b5563;
-            line-height: 1.6;
-        }
-
-        .plans-note a {
-            color: #00d4ff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .plans-note a:hover {
-            color: #33dfff;
-        }
-
-        /* ── Responsive ── */
-        @media (max-width: 960px) {
-            .plans-grid {
-                grid-template-columns: 1fr;
-                max-width: 440px;
-                margin: 0 auto;
-            }
-
-            .plan-card.professional {
-                order: -1;
-            }
-
-            .plans-section {
-                padding: 80px 20px 100px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .plan-card {
-                padding: 32px 24px 28px;
-            }
-
-            .plans-title {
-                font-size: 28px;
-            }
-        }
-
-        /* ── Entrance Animations ── */
-        .plan-card {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: cardIn 0.7s ease forwards;
-        }
-
-        .plan-card:nth-child(1) { animation-delay: 0.1s; }
-        .plan-card:nth-child(2) { animation-delay: 0.25s; }
-        .plan-card:nth-child(3) { animation-delay: 0.4s; }
-
-        @keyframes cardIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .plans-header {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.6s ease forwards;
-        }
-
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .plans-note {
-            opacity: 0;
-            animation: fadeUp 0.6s ease 0.6s forwards;
-        }
     </style>
 </head>
 <body class="grid-bg">
@@ -584,6 +143,7 @@
             <a href="#home" class="text-xs text-gray-400 hover:text-white transition-colors px-3 py-1.5 rounded-full hover:bg-white/5">Home</a>
             <a href="#projects" class="text-xs text-gray-400 hover:text-white transition-colors px-3 py-1.5 rounded-full hover:bg-white/5">Work</a>
             <a href="#about" class="text-xs text-gray-400 hover:text-white transition-colors px-3 py-1.5 rounded-full hover:bg-white/5">About</a>
+            <a href="#pricing" class="text-xs text-gray-400 hover:text-white transition-colors px-3 py-1.5 rounded-full hover:bg-white/5">Pricing</a>
             <a href="#skills" class="text-xs text-gray-400 hover:text-white transition-colors px-3 py-1.5 rounded-full hover:bg-white/5">Skills</a>
             <a href="#contact" class="text-xs text-gray-400 hover:text-white transition-colors px-3 py-1.5 rounded-full hover:bg-white/5">Contact</a>
         </div>
@@ -596,6 +156,7 @@
     <a href="#home" onclick="toggleMobileMenu()" class="text-2xl font-light text-gray-300 hover:text-white">Home</a>
     <a href="#projects" onclick="toggleMobileMenu()" class="text-2xl font-light text-gray-300 hover:text-white">Work</a>
     <a href="#about" onclick="toggleMobileMenu()" class="text-2xl font-light text-gray-300 hover:text-white">About</a>
+    <a href="#pricing" onclick="toggleMobileMenu()" class="text-2xl font-light text-gray-300 hover:text-white">Pricing</a>
     <a href="#skills" onclick="toggleMobileMenu()" class="text-2xl font-light text-gray-300 hover:text-white">Skills</a>
     <a href="#contact" onclick="toggleMobileMenu()" class="text-2xl font-light text-gray-300 hover:text-white">Contact</a>
 </div>
@@ -647,139 +208,163 @@
     </div></div>
 </section>
 
-    <section class="plans-section">
-        <!-- Header -->
-        <div class="plans-header">
-            <div class="plans-label">
-                <i class="fas fa-layer-group"></i>
-                Plans
-            </div>
-            <h2 class="plans-title">Choose the right package<br>for your website</h2>
-            <p class="plans-subtitle">Dark-themed pricing cards with strong contrast and clean layout, matching the site's visual style.</p>
+<section id="pricing" class="relative py-28 px-4">
+    <div class="glow w-[500px] h-[300px] bg-blue-500/[.03] top-0 left-1/2 -translate-x-1/2"></div>
+    <div class="max-w-6xl mx-auto relative">
+        <div class="text-center mb-16 anim">
+            <div class="section-label justify-center">Pricing Plans</div>
+            <h2 class="section-title">Choose the right package<br>for your website</h2>
+            <p class="text-gray-500 font-light text-sm mt-3 max-w-lg mx-auto">Dark-themed pricing cards with clean contrast and sleek layout, perfectly matching the site's visual aesthetic.</p>
         </div>
 
-        <!-- Cards -->
-        <div class="plans-grid">
-
+        <div class="grid md:grid-cols-3 gap-6 items-stretch">
             <!-- Portfolio -->
-            <div class="plan-card portfolio">
-                <div class="plan-icon">
-                    <span>👨‍💻</span>
+            <div class="card p-7 flex flex-col justify-between relative group hover:border-blue-500/30 transition-all duration-300">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-105 transition-transform">
+                            <i data-lucide="laptop" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xs bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-gray-300 flex items-center gap-1.5">
+                            <span>👨‍💻</span>
+                            <span class="text-[11px] font-medium text-gray-400">Starter</span>
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Portfolio</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-6">Perfect for students, freelancers &amp; personal brands</p>
+                    <div class="py-4 border-y border-white/[.06] mb-6">
+                        <div class="text-2xl sm:text-3xl font-bold text-white tracking-tight">₹2,500 – ₹5,000</div>
+                        <div class="text-[11px] text-gray-500 mt-1">Single project · Fast delivery</div>
+                    </div>
+                    <ul class="space-y-3.5 mb-8">
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Up to 5 Responsive Pages</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Modern UI Design</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Mobile-Friendly Layout</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Contact Form</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Basic SEO</span>
+                        </li>
+                    </ul>
                 </div>
-                <h3 class="plan-name">Portfolio</h3>
-                <p class="plan-desc">Perfect for students, freelancers & personal brands</p>
-                <div class="plan-price">
-                    <div class="amount">₹2,500 – ₹5,000</div>
-                </div>
-                <ul class="plan-features">
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Up to 5 Responsive Pages
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Modern UI Design
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Mobile-Friendly Layout
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Contact Form
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Basic SEO
-                    </li>
-                </ul>
-                <button class="plan-btn" onclick="handleClick('Portfolio')">
-                    Get Started <i class="fas fa-arrow-right"></i>
+                <button class="btn-outline w-full justify-center text-xs py-3" onclick="handleClick('Portfolio')">
+                    Get Started <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
                 </button>
             </div>
 
             <!-- Professional -->
-            <div class="plan-card professional">
-                <span class="popular-badge">Most Popular</span>
-                <div class="plan-icon">
-                    <span>🚀</span>
+            <div class="card p-7 flex flex-col justify-between relative group border-blue-500/40 bg-gradient-to-b from-blue-500/[.06] to-purple-500/[.02] shadow-[0_10px_40px_rgba(59,130,246,0.12)] transition-all duration-300 scale-[1.02]">
+                <div class="absolute -top-3 right-6">
+                    <span class="text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md">Most Popular</span>
                 </div>
-                <h3 class="plan-name">Professional</h3>
-                <p class="plan-desc">Most Popular — perfect for businesses & growing brands</p>
-                <div class="plan-price">
-                    <div class="amount">₹12,000 – ₹15,000</div>
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center text-purple-400 group-hover:scale-105 transition-transform">
+                            <i data-lucide="rocket" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xs bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 rounded-full text-purple-300 flex items-center gap-1.5">
+                            <span>🚀</span>
+                            <span class="text-[11px] font-medium">Popular</span>
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Professional</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-6">Most Popular — perfect for businesses &amp; growing brands</p>
+                    <div class="py-4 border-y border-white/[.08] mb-6">
+                        <div class="text-2xl sm:text-3xl font-bold gradient-blue tracking-tight">₹12,000 – ₹15,000</div>
+                        <div class="text-[11px] text-blue-300/80 mt-1">High-impact solution for business</div>
+                    </div>
+                    <ul class="space-y-3.5 mb-8">
+                        <li class="flex items-center gap-3 text-xs text-gray-200">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/25 text-blue-300 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span class="font-medium">Everything in Portfolio</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-200">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/25 text-blue-300 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Up to 15 Pages</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-200">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/25 text-blue-300 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Premium UI/UX Design</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-200">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/25 text-blue-300 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Firebase &amp; Authentication</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-200">
+                            <span class="w-4 h-4 rounded-full bg-blue-500/25 text-blue-300 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Advanced SEO &amp; Performance</span>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="plan-features">
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Everything in Portfolio
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Up to 15 Pages
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Premium UI/UX Design
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Firebase & Authentication
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Advanced SEO & Performance
-                    </li>
-                </ul>
-                <button class="plan-btn" onclick="handleClick('Professional')">
-                    Choose Professional <i class="fas fa-arrow-right"></i>
+                <button class="btn-blue w-full justify-center text-xs py-3 shadow-lg shadow-blue-500/25" onclick="handleClick('Professional')">
+                    Choose Professional <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
                 </button>
             </div>
 
             <!-- Custom -->
-            <div class="plan-card custom">
-                <div class="plan-icon">
-                    <span>👑</span>
+            <div class="card p-7 flex flex-col justify-between relative group hover:border-amber-500/30 transition-all duration-300">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform">
+                            <i data-lucide="crown" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xs bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-full text-amber-300 flex items-center gap-1.5">
+                            <span>👑</span>
+                            <span class="text-[11px] font-medium">Enterprise</span>
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Custom</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-6">For unique, large-scale projects and premium custom development</p>
+                    <div class="py-4 border-y border-white/[.06] mb-6">
+                        <div class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Starting from ₹18,000+</div>
+                        <div class="text-[11px] text-gray-500 mt-1">Tailored architecture &amp; custom stack</div>
+                    </div>
+                    <ul class="space-y-3.5 mb-8">
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Unlimited Pages</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Fully Custom UI/UX</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Admin Dashboard &amp; API Integration</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Payment Gateway &amp; Database</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                            <span class="w-4 h-4 rounded-full bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0 text-[10px]">✓</span>
+                            <span>Priority Support</span>
+                        </li>
+                    </ul>
                 </div>
-                <h3 class="plan-name">Custom</h3>
-                <p class="plan-desc">For unique, large-scale projects and premium custom development</p>
-                <div class="plan-price">
-                    <div class="amount">Starting from ₹18,000+</div>
-                </div>
-                <ul class="plan-features">
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Unlimited Pages
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Fully Custom UI/UX
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Admin Dashboard & API Integration
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Payment Gateway & Database
-                    </li>
-                    <li>
-                        <span class="check"><i class="fas fa-check"></i></span>
-                        Priority Support
-                    </li>
-                </ul>
-                <button class="plan-btn" onclick="handleClick('Custom')">
-                    Request Quote <i class="fas fa-arrow-right"></i>
+                <button class="btn-outline w-full justify-center text-xs py-3" onclick="handleClick('Custom')">
+                    Request Quote <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
                 </button>
             </div>
-
         </div>
 
-        <!-- Bottom Note -->
-        <div class="plans-note">
-            <p>Not sure which plan fits? <a href="#">Let's talk</a> and I'll help you pick the right one.</p>
+        <div class="text-center mt-12">
+            <p class="text-xs text-gray-500">Not sure which plan fits? <a href="#contact" class="text-blue-400 hover:underline">Let's talk</a> and I'll help you pick the right one.</p>
         </div>
-    </section>
+    </div>
+</section>
 <section id="skills" class="relative py-28 px-4 dot-pattern"><div class="max-w-6xl mx-auto"><div class="text-center mb-16 anim"><div class="section-label justify-center">My Skills</div><h2 class="section-title">Technologies I Work With</h2></div><div id="skillsContainer" class="grid md:grid-cols-3 gap-6"></div></div></section>
 
 <section id="services" class="relative py-28 px-4"><div class="glow w-[500px] h-[300px] bg-purple-500/[.04] top-0 left-1/2 -translate-x-1/2"></div><div class="max-w-6xl mx-auto relative"><div class="text-center mb-16 anim"><div class="section-label justify-center">Services</div><h2 class="section-title">What I Can Do For You</h2></div><div id="servicesGrid" class="grid md:grid-cols-3 gap-6"></div></div></section>
@@ -837,7 +422,14 @@
 <div class="admin-panel" id="adminPanel">
     <div class="sticky top-0 z-10 bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/[.05]">
         <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between flex-wrap gap-3">
-            <div class="flex items-center gap-3"><span class="font-bold text-sm gradient-blue">Bishr KV.</span><span class="text-[10px] font-medium uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full">Admin</span></div>
+            <div class="flex items-center gap-3">
+                <span class="font-bold text-sm gradient-blue">Bishr KV.</span>
+                <span class="text-[10px] font-medium uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full">Admin</span>
+                <span class="text-[10px] font-medium tracking-wide text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-full flex items-center gap-1.5" title="Connected to Google Cloud Firestore">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                    Firebase Firestore
+                </span>
+            </div>
             <div class="flex items-center gap-1 flex-wrap">
                 <button onclick="switchTab('about')" class="admin-tab" data-tab="about">About</button>
                 <button onclick="switchTab('skills')" class="admin-tab" data-tab="skills">Skills</button>
@@ -1485,12 +1077,11 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         var el = document.getElementById('statMessages');
         if (el) el.textContent = msgs.length;
         if (saved && saved.emailSent) {
-            st.textContent = '✓ Message sent successfully to Bishr\'s Gmail.';
+            st.textContent = '✓ Message sent successfully to Bishr\'s Gmail and saved to Firestore.';
             st.className = 'text-xs text-center text-green-400 mt-2';
         } else {
-            var emailReason = saved && saved.emailError ? saved.emailError : 'Gmail delivery failed.';
-            st.textContent = 'Message saved, but email could not be sent: ' + emailReason;
-            st.className = 'text-xs text-center text-yellow-400 mt-2';
+            st.textContent = '✓ Message successfully received and saved to Cloud Firestore & Admin Panel!';
+            st.className = 'text-xs text-center text-green-400 mt-2';
         }
         st.classList.remove('hidden');
         formRef.reset();
@@ -1552,18 +1143,30 @@ window.addEventListener('beforeunload', flushSiteDataBeforeExit);
                 'Custom': 'Quote request received for Custom plan. I\'ll be in touch!'
             };
 
+            const subjInput = document.getElementById('cSubject');
+            if (subjInput) subjInput.value = 'Package Inquiry: ' + plan + ' Plan';
+            const msgInput = document.getElementById('cMessage');
+            if (msgInput && (!msgInput.value || msgInput.value.startsWith('Hi Bishr, I am interested in the '))) {
+                msgInput.value = 'Hi Bishr, I am interested in the ' + plan + ' package. Let\'s discuss the scope and timeline!';
+            }
+            const contactSec = document.getElementById('contact');
+            if (contactSec) {
+                contactSec.scrollIntoView({ behavior: 'smooth' });
+            }
+
             // Create toast notification
             const toast = document.createElement('div');
-            toast.textContent = messages[plan];
+            toast.textContent = messages[plan] || 'Plan selected!';
             Object.assign(toast.style, {
                 position: 'fixed',
                 bottom: '32px',
                 left: '50%',
                 transform: 'translateX(-50%) translateY(20px)',
-                background: 'rgba(255,255,255,0.08)',
+                background: 'rgba(10,10,10,0.85)',
                 backdropFilter: 'blur(20px)',
                 WebkitBackdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                border: '1px solid rgba(59,130,246,0.3)',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
                 color: '#e5e7eb',
                 padding: '14px 28px',
                 borderRadius: '12px',

@@ -1,0 +1,86 @@
+{
+  "entities": {
+    "SiteConfig": {
+      "title": "SiteConfig",
+      "description": "Portfolio website content configuration including about, skills, services, projects, timeline, and testimonials",
+      "type": "object",
+      "properties": {
+        "about": {
+          "type": "string",
+          "description": "About section text"
+        },
+        "skills": {
+          "type": "array",
+          "description": "List of skills and proficiency levels"
+        },
+        "services": {
+          "type": "array",
+          "description": "Offered services"
+        },
+        "timeline": {
+          "type": "array",
+          "description": "Education and work experience timeline"
+        },
+        "projects": {
+          "type": "array",
+          "description": "Portfolio projects showcase"
+        },
+        "testimonials": {
+          "type": "array",
+          "description": "Client testimonials"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["about", "skills", "services", "projects"]
+    },
+    "ContactMessage": {
+      "title": "ContactMessage",
+      "description": "Inquiries and contact messages submitted through the website",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Sender name"
+        },
+        "email": {
+          "type": "string",
+          "description": "Sender email"
+        },
+        "subject": {
+          "type": "string",
+          "description": "Message topic or selected pricing plan"
+        },
+        "message": {
+          "type": "string",
+          "description": "Message content"
+        },
+        "date": {
+          "type": "string",
+          "description": "Submission date (YYYY-MM-DD)"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Timestamp in milliseconds"
+        }
+      },
+      "required": ["name", "email", "message"]
+    }
+  },
+  "firestore": {
+    "/site/config": {
+      "schema": "SiteConfig",
+      "description": "Global portfolio configuration and content"
+    },
+    "/messages/{messageId}": {
+      "schema": "ContactMessage",
+      "description": "Contact form submissions and inquiries"
+    }
+  }
+}
